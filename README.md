@@ -1,103 +1,78 @@
-# Exploratory Data Analysis on Cars Dataset
+# 🚗 Cars Dataset - Exploratory Data Analysis
 
-## Project Overview
+## 📌 Project Overview
 
-This project is based on Exploratory Data Analysis (EDA) performed on the Cars dataset from Kaggle.
+This project is based on Exploratory Data Analysis (EDA) of a Cars dataset.
 
-The main objective of this project is to understand the dataset, examine its features, check data types and records, identify duplicate values, remove irrelevant columns, analyze numerical features, detect outliers, and clean the dataset using the IQR method.
+The main purpose of this project is to understand the dataset, clean the data, identify outliers, and explore different patterns using Python and data visualization.
 
-Exploratory Data Analysis helps us understand the structure and quality of data before using it for further analysis or machine learning.
+## 🎯 Objectives
 
----
+- Understand the Cars dataset
+- Check columns and data types
+- Check missing and duplicate records
+- Remove unnecessary columns
+- Identify and handle outliers
+- Perform basic data analysis
+- Create visualizations to understand the data
 
-## Problem Statement
+## 📊 Dataset
 
-We have used the Cars dataset from Kaggle with features including make, model, year, engine details, transmission, driven wheels, mileage, popularity, and price.
+The dataset contains information about different cars, including:
 
-The purpose of this project is to perform systematic data exploration and preprocessing on the dataset.
+- Make
+- Model
+- Year
+- Engine HP
+- Engine Cylinders
+- Transmission Type
+- Driven Wheels
+- Highway MPG
+- City MPG
+- MSRP
 
-The analysis includes:
-
-- Understanding the dataset
-- Checking the available columns
-- Understanding each feature
-- Checking data types
-- Checking non-null records
-- Finding unique values
-- Removing duplicate rows
-- Removing irrelevant columns
-- Selecting numerical columns
-- Detecting outliers
-- Visualizing outliers using boxplots
-- Removing outliers using the IQR method
-- Comparing the dataset before and after cleaning
-
----
-
-## Dataset
-
-The project uses the **Cars dataset from Kaggle**.
-
-The original dataset contains:
-
-- **11,914 rows**
-- **16 columns**
-
-The dataset contains both categorical and numerical features related to different cars.
-
----
-
-## Features in the Dataset
-
-The dataset contains the following expected columns:
-
-| Column | Description |
-|---|---|
-| Make | Company or manufacturer of the car |
-| Model | Model or version of the car |
-| Year | Year of the car model |
-| Engine Fuel Type | Type of fuel used by the engine |
-| Engine HP | Horsepower produced by the engine |
-| Engine Cylinders | Number of cylinders present in the engine |
-| Transmission Type | Type of transmission, such as manual or automatic |
-| Driven Wheels | Type of wheel drive |
-| Number of Doors | Number of doors present in the car |
-| Market Category | Category of the car |
-| Vehicle Size | Size category of the vehicle |
-| Vehicle Style | Style or body type of the vehicle |
-| Highway MPG | Average mileage of the car on the highway |
-| City MPG | Average mileage of the car in the city |
-| Popularity | Popularity rating of the car |
-| MSRP | Manufacturer's Suggested Retail Price of the car |
-
----
-
-## Technologies Used
-
-The following technologies and Python libraries are used in this project:
+## 🛠️ Tools & Libraries
 
 - Python
-- Jupyter Notebook
-- Google Colab
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
 - SciPy
+- Jupyter Notebook
 
----
+## 🔍 EDA Process
 
-## Importing Required Libraries
+The project includes:
 
-The required Python libraries are imported before starting the analysis.
+1. Loading the dataset
+2. Understanding the dataset
+3. Checking columns and data types
+4. Checking non-null records
+5. Finding unique values
+6. Removing duplicate records
+7. Removing irrelevant columns
+8. Selecting numerical columns
+9. Detecting outliers using boxplots
+10. Removing outliers using the IQR method
+11. Performing data visualization and analysis
 
-```python
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from scipy import stats
-import warnings
+## 📈 Outlier Handling
 
-warnings.filterwarnings("ignore")# Srishti-Pandey--EDA---Assignment
-Exploratory Data Analysis of Cars Dataset | EDA Practical Day 14 | Data Cleaning, Outlier Detection &amp; Visualization
+Outliers were identified using boxplots and handled using the **IQR (Interquartile Range)** method.
+
+**IQR = Q3 - Q1**
+
+The lower and upper limits were calculated using:
+
+- Lower Bound = Q1 - 1.5 × IQR
+- Upper Bound = Q3 + 1.5 × IQR
+
+## 📁 Project Structure
+
+```text
+Cars-EDA/
+│
+├── Srishti_Pandey_EDA_Assignment_Practical_Day_14.ipynb
+├── README.md
+└── Cars.csv
